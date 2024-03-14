@@ -13,6 +13,7 @@
 		36752D792BA32E2A0038739D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36752D772BA32E2A0038739D /* Main.storyboard */; };
 		36752D7B2BA32E2C0038739D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36752D7A2BA32E2C0038739D /* Assets.xcassets */; };
 		36752D7E2BA32E2C0038739D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36752D7C2BA32E2C0038739D /* LaunchScreen.storyboard */; };
+		36752D862BA331220038739D /* RegistrationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36752D852BA331220038739D /* RegistrationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		36752D7A2BA32E2C0038739D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36752D7D2BA32E2C0038739D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36752D7F2BA32E2C0038739D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36752D852BA331220038739D /* RegistrationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				36752D712BA32E2A0038739D /* AppDelegate.swift */,
 				36752D732BA32E2A0038739D /* SceneDelegate.swift */,
 				36752D752BA32E2A0038739D /* ViewController.swift */,
+				36752D852BA331220038739D /* RegistrationTableViewCell.swift */,
 				36752D772BA32E2A0038739D /* Main.storyboard */,
 				36752D7A2BA32E2C0038739D /* Assets.xcassets */,
 				36752D7C2BA32E2C0038739D /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36752D862BA331220038739D /* RegistrationTableViewCell.swift in Sources */,
 				36752D762BA32E2A0038739D /* ViewController.swift in Sources */,
 				36752D722BA32E2A0038739D /* AppDelegate.swift in Sources */,
 				36752D742BA32E2A0038739D /* SceneDelegate.swift in Sources */,
