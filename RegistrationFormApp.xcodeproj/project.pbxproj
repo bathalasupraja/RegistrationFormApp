@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		364253812BA41AB0006B1D06 /* RegisterActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364253802BA41AB0006B1D06 /* RegisterActionTableViewCell.swift */; };
 		36752D722BA32E2A0038739D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36752D712BA32E2A0038739D /* AppDelegate.swift */; };
 		36752D742BA32E2A0038739D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36752D732BA32E2A0038739D /* SceneDelegate.swift */; };
 		36752D762BA32E2A0038739D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36752D752BA32E2A0038739D /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		364253802BA41AB0006B1D06 /* RegisterActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterActionTableViewCell.swift; sourceTree = "<group>"; };
 		36752D6E2BA32E2A0038739D /* RegistrationFormApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegistrationFormApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36752D712BA32E2A0038739D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36752D732BA32E2A0038739D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				36752D752BA32E2A0038739D /* ViewController.swift */,
 				36752D852BA331220038739D /* RegistrationTableViewCell.swift */,
 				36752D772BA32E2A0038739D /* Main.storyboard */,
+				364253802BA41AB0006B1D06 /* RegisterActionTableViewCell.swift */,
 				36752D7A2BA32E2C0038739D /* Assets.xcassets */,
 				36752D7C2BA32E2C0038739D /* LaunchScreen.storyboard */,
 				36752D7F2BA32E2C0038739D /* Info.plist */,
@@ -144,6 +147,7 @@
 				36752D862BA331220038739D /* RegistrationTableViewCell.swift in Sources */,
 				36752D762BA32E2A0038739D /* ViewController.swift in Sources */,
 				36752D722BA32E2A0038739D /* AppDelegate.swift in Sources */,
+				364253812BA41AB0006B1D06 /* RegisterActionTableViewCell.swift in Sources */,
 				36752D742BA32E2A0038739D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

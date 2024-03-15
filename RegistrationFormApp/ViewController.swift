@@ -13,7 +13,6 @@ struct FieldModel {
     var placeholder: String
     
 }
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var registrationTableView: UITableView!
@@ -34,6 +33,17 @@ class ViewController: UIViewController {
         fields.append(FieldModel(name: "Dob", placeholder: " "))
         fields.append(FieldModel(name: "Gender", placeholder: " "))
     }
+    
+    func getCellIdentifierAtIndexPath(_ indexPath: IndexPath) -> String {
+        switch indexPath.row {
+        case 0:
+            return "RegistrationTableViewCell"
+        case 6:
+            return "RegisterActionTableViewCell"
+        default:
+            return ""
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -42,16 +52,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RegistrationTableViewCell.id, for: indexPath)
         let field = fields[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: RegistrationTableViewCell.id, for: indexPath)
         if let registrationTableViewCell = cell as? RegistrationTableViewCell {
             registrationTableViewCell.nameLabel.text = field.name
-            registrationTableViewCell.nameTextField.text = field.placeholder
+                registrationTableViewCell.nameTextField.text = field.placeholder
             return cell
         }
         return UITableViewCell()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            90
-        }
+        100
+    }
 }
+                
