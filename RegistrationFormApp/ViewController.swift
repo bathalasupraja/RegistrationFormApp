@@ -11,8 +11,10 @@ import UIKit
 struct FieldModel {
     var name: String
     var placeholder: String
+    var value: String?
     
 }
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var registrationTableView: UITableView!
@@ -22,47 +24,65 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createFields()
+        registrationTableView.separatorStyle = .none
+        registrationTableView.allowsSelection = false
         registrationTableView.dataSource = self
         registrationTableView.delegate = self
     }
     
     func createFields() {
-        fields.append(FieldModel(name: "Name", placeholder: " "))
-        fields.append(FieldModel(name: "Email", placeholder: " "))
-        fields.append(FieldModel(name: "Phone", placeholder: " "))
-        fields.append(FieldModel(name: "Dob", placeholder: " "))
-        fields.append(FieldModel(name: "Gender", placeholder: " "))
+        fields.append(FieldModel(name: "Name", placeholder: "Enter name"))
+        fields.append(FieldModel(name: "Email", placeholder: "Enter email"))
+        fields.append(FieldModel(name: "Phone", placeholder: "Enter phone number"))
+        fields.append(FieldModel(name: "Dob", placeholder: "Enter date of birth"))
+        fields.append(FieldModel(name: "Gender", placeholder: "Enter gender"))
     }
     
     func getCellIdentifierAtIndexPath(_ indexPath: IndexPath) -> String {
         switch indexPath.row {
-        case 0:
-            return "RegistrationTableViewCell"
-        case 6:
-            return "RegisterActionTableViewCell"
+        case 5:
+            return RegisterActionTableViewCell.id
         default:
-            return ""
+            return RegistrationTableViewCell.id
+        }
+    }
+    
+    func getCellHeightAtIndexPath(_ indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 5:
+            return 100
+        default:
+            return 70
         }
     }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        fields.count
+        return fields.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let field = fields[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: RegistrationTableViewCell.id, for: indexPath)
+        
+        let cellIdentifier = getCellIdentifierAtIndexPath(indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         if let registrationTableViewCell = cell as? RegistrationTableViewCell {
-            registrationTableViewCell.nameLabel.text = field.name
-                registrationTableViewCell.nameTextField.text = field.placeholder
-            return cell
+            let field = fields[indexPath.row]
+            registrationTableViewCell.prepareWithField(field, delegate: self, indexPath: indexPath)
         }
-        return UITableViewCell()
+        return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        100
+        let height = getCellHeightAtIndexPath(indexPath)
+        return height
+    }
+}
+
+extension ViewController: RegistrationTableViewCellDelegate {
+    func didUpdateText(_ text: String?, tag: Int) {
+        print(text)
+        print(tag)
+        fields[tag].value = text
     }
 }
                 
